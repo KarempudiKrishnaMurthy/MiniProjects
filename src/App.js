@@ -8,8 +8,11 @@ import ThemeContext from "./UseContext/Create_context.jsx";
 import ThemeComponent from "./UseContext/ThemeComponent.tsx";
 import ThemeSwitcher from "./UseContext/ThemeSwitcher.tsx";
 import ReducerCounter from "./UseReducer/UseReducerCompoent.jsx";
-import { reducer } from "./UseReducer/ReducerFunction.jsx";
-import { initalState } from "./UseReducer/ReducerFunction.jsx";
+import HighlightInput from "./UseRef/HighlightInput.jsx";
+import "primereact/resources/themes/saga-blue/theme.css"; /* or another theme */
+import "primereact/resources/primereact.min.css"; /* PrimeReact core CSS */
+import "primeicons/primeicons.css"; /* PrimeIcons CSS */
+import "primeflex/primeflex.css";
 
 function App() {
   const [theme, settheme] = useState("light");
@@ -19,23 +22,24 @@ function App() {
   };
 
   return (
-    <div className="App">
-      
-      <div>
+    <div className="grid">
+      <div className="col-12 ">
         <h1>UseState</h1>
         <Counter />
       </div>
-
-      <div>
-        <h1>UseEffect loding</h1>
-        <Datafetch />
-        <h1>UseEffect Pagetitle change</h1>
-        <PageTitle />
-        <h1>UseEffect Timmer</h1>
-        <Timer />
-      </div>
-
-      <div>
+        <div className="col-4">
+          <h1>UseEffect loding</h1>
+          <Datafetch />
+        </div>
+        <div className="col-4">
+          <h1>UseEffect Pagetitle change</h1>
+          <PageTitle />
+        </div>
+        <div className="col-4">
+          <h1>UseEffect Timmer</h1>
+          <Timer />
+        </div>
+      <div className="col-4">
         <h1>Use Context</h1>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <ThemeSwitcher />
@@ -43,11 +47,15 @@ function App() {
         </ThemeContext.Provider>
       </div>
 
-      <div>
+      <div className="col-4">
         <h1>Use Reducer</h1>
         <ReducerCounter />
       </div>
 
+      <div className="col-4">
+        <h1>Use Ref</h1>
+        <HighlightInput />
+      </div>
     </div>
   );
 }
