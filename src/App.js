@@ -13,6 +13,7 @@ import "primereact/resources/themes/saga-blue/theme.css"; /* or another theme */
 import "primereact/resources/primereact.min.css"; /* PrimeReact core CSS */
 import "primeicons/primeicons.css"; /* PrimeIcons CSS */
 import "primeflex/primeflex.css";
+import FactorialCaluculator from "./UseMemo/UseMemo.jsx";
 
 function App() {
   const [theme, settheme] = useState("light");
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div className="grid">
-      <div className="col-12 ">
+      <div className="col-4 ">
         <h1>UseState</h1>
         <Counter />
       </div>
@@ -55,6 +56,10 @@ function App() {
       <div className="col-4">
         <h1>Use Ref</h1>
         <HighlightInput />
+      </div>
+
+      <div className="col-4">
+        <FactorialCaluculator/>
       </div>
     </div>
   );
