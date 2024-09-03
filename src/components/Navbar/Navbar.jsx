@@ -36,7 +36,7 @@ const NavBar = () => {
         To-Do List
       </Link>
       <Link
-        to="/practice"
+        to="/calculator"
         style={{
           margin: "0 15px",
           textDecoration: "none",
@@ -44,7 +44,7 @@ const NavBar = () => {
           fontWeight: "bold",
         }}
       >
-        Practice Components
+        Calculator
       </Link>
     </nav>
   );

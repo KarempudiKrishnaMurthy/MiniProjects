@@ -34,7 +34,7 @@ export default function ToDoList() {
         i === editIndex ? { ...task, text: editText } : task
       );
       setTasks(updatedTasks);
-      setEditIndex(null);
+      setEditIndex(null); 
       setEditText("");
     }
   };
