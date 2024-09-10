@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaHome, FaList, FaCalculator, FaMoneyBillWave } from 'react-icons/fa'; // Import the required icons
 
 const NavBar = () => {
   return (
     <nav
       style={{
         display: "flex",
+        alignItems: "center",
         justifyContent: "center",
         padding: "10px",
         backgroundColor: "#f0f0f0",
@@ -16,35 +18,54 @@ const NavBar = () => {
       <Link
         to="/"
         style={{
+          display: "flex",
+          alignItems: "center",
           margin: "0 15px",
           textDecoration: "none",
           color: "#333",
           fontWeight: "bold",
         }}
       >
-        Home
+        <FaHome style={{ marginRight: "8px" }} /> Home
       </Link>
       <Link
         to="/todo"
         style={{
+          display: "flex",
+          alignItems: "center",
           margin: "0 15px",
           textDecoration: "none",
           color: "#333",
           fontWeight: "bold",
         }}
       >
-        To-Do List
+        <FaList style={{ marginRight: "8px" }} /> To-Do List
       </Link>
       <Link
         to="/calculator"
         style={{
+          display: "flex",
+          alignItems: "center",
           margin: "0 15px",
           textDecoration: "none",
           color: "#333",
           fontWeight: "bold",
         }}
       >
-        Calculator
+        <FaCalculator style={{ marginRight: "8px" }} /> Calculator
+      </Link>
+      <Link
+        to="/budget-tracker"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          margin: "0 15px",
+          textDecoration: "none",
+          color: "#333",
+          fontWeight: "bold",
+        }}
+      >
+        <FaMoneyBillWave style={{ marginRight: "8px" }} /> Budget Tracker
       </Link>
     </nav>
   );

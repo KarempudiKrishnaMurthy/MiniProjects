@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/Navbar/Navbar.jsx"; // Import the NavBar component
-import ToDoList from "./MiniProjects/ToDoList/ToDoList.jsx"; // Import your To-Do List component
+import NavBar from "./components/Navbar/Navbar.jsx";
+import ToDoList from "./MiniProjects/ToDoList/ToDoList.jsx";
 import Calculator from "./MiniProjects/Calculator/Calculator.jsx";
+import BudgetTracker from "../src/MiniProjects/Budget-tracker/Budget_tracker.jsx"; // Import the BudgetTracker component
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/todo" element={<ToDoList />} />
-            <Route path="/calculator" element={<Calculator/>} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/budget-tracker" element={<BudgetTracker />} /> {/* Add BudgetTracker route */}
           </Routes>
         </div>
       </div>
@@ -39,7 +41,15 @@ function Home() {
       >
         Go to Calculator Components
       </button>
+      <button
+        onClick={() => window.location.href = '/budget-tracker'}
+        className="button bg-blue-500 hover:bg-blue-600 ml-4"
+      >
+        Go to Budget Tracker
+      </button>
     </div>
   );
 }
+
 export default App;
+

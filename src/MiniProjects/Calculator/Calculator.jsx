@@ -11,7 +11,7 @@ export default function Calculator() {
     if (buttonName === "C") {
       setInput("");
       setResult(null);
-      return;
+      return; 
     }
 
     if (buttonName === "=") {
